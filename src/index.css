@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: "Space Grotesk", sans-serif;
     background: linear-gradient(135deg, #282727, #201e1e);

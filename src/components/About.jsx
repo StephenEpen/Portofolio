@@ -39,7 +39,7 @@ const About = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
           quas.
         </p>
-        <div className="flex flex-wrap gap-4 text-4xl justify-center">
+        <div className="flex flex-wrap gap-4 text-4xl ">
           <Html5Plain colored size="30" />
           <Css3Plain colored size="30" />
           <ReactOriginal colored size="30" />
