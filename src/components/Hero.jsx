@@ -7,7 +7,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 const Hero = () => {
   return (
     <div className="grid md:grid-cols-2 place-items-center max-w-[1250px] mx-auto mb-8 md:md-32 pt-24">
-      <div className="max-w-[800px] p-4 md:p-0">
+      <div className="max-w-[800px] p-4 md:p-2">
         <p className="text-gray-200 md:text-6xl text-3xl tracking-tight">
           HEY, I AM <br />
           <span className="">Stephen</span> <br />
