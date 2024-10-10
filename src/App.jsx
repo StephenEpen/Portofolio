@@ -3,6 +3,7 @@ import Education from "./components/Education";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Portofolio from "./components/Portofolio";
+import Score from "./components/Score";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Education />
+      <Score />
       <About />
       <Portofolio />
     </>

@@ -17,7 +17,7 @@ import {
 const About = () => {
   return (
     <div
-      className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center"
+      className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center mt-12 sm:mt-16 lg:mt-24"
       id="about"
     >
       <div className="relative group">
