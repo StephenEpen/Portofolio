@@ -19,7 +19,7 @@ const Hero = () => {
           />
         </p>
         <h2 className="text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quod!
+        I am a Computer Science student at Bina Nusantara University, currently enrolled in Software Engineering. I enjoy learning new programming languages while building websites, and I actively seek opportunities to enhance my skills with a quick understanding.
         </h2>
 
         <div className="flex flex-row gap-4 md:gap-6 mb-4 md:mb-0">
@@ -27,7 +27,7 @@ const Hero = () => {
             Download CV
           </button>
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/StephenEpen"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 w-12 h-12 mt-6 p-2 border border-gray-400 rounded-xl flex items-center justify-center"
@@ -36,7 +36,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/stephen-tio-90b65a251/"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 w-12 h-12 mt-6 p-2 border border-gray-400 rounded-xl flex items-center justify-center"

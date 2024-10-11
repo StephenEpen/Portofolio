@@ -3,6 +3,15 @@ import project1 from "../assets/project1.png";
 import image2 from "../assets/image2.jpeg";
 import image3 from "../assets/image3.png";
 import image4 from "../assets/image4.jpeg";
+import project21 from "../assets/project2-1.png";
+import project22 from "../assets/project2-2.png";
+import project23 from "../assets/project2-3.png";
+import project24 from "../assets/project2-4.png";
+import project31 from "../assets/project3-1.png";
+import project32 from "../assets/project3-2.png";
+import project33 from "../assets/project3-3.png";
+import project34 from "../assets/project3-4.png";
+import project35 from "../assets/project3-5.png";
 import { AiFillGithub } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
 import {
@@ -14,34 +23,33 @@ import {
   JavascriptOriginal,
 } from "devicons-react";
 import Carousel from "./Carousel";
-import { ChevronLeft, ChevronRight } from "react-feather";
 
 const projects = [
+  // {
+  //   img: [project1, image2, image3, image4],
+  //   title: "Project #1",
+  //   description:
+  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
+  //   links: {
+  //     site: "#",
+  //     github: "#",
+  //   },
+  //   language: [Html5Plain, Css3Plain],
+  // },
   {
-    img: [project1, image2, image3, image4],
-    title: "Project #1",
+    img: [project21, project22, project23, project24],
+    title: "Bad Code Smell",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
     links: {
-      site: "#",
-      github: "#",
-    },
-    language: [Html5Plain, Css3Plain],
-  },
-  {
-    img: [project1],
-    title: "Project #2",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
-    links: {
-      site: "#",
-      github: "#",
+      site: "https://bad-code-smell-ss.vercel.app/",
+      github: "https://github.com/StephenEpen/Bad-Code-Smell",
     },
     language: [JavaOriginal, MysqlOriginalWordmark],
   },
   {
-    img: [project1],
-    title: "Project #3",
+    img: [project31, project32, project33, project34, project35],
+    title: "JETFLIX",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
     links: {
@@ -55,7 +63,16 @@ const projects = [
 const Portofolio = () => {
   const [currentProject, setCurrentProject] = useState(0);
 
-  const [slide, setSlide] = useState(0)
+  const [fade, setFade] = useState(true);
+
+  const handleProjectChange = (index) => {
+    setFade(false); // Start fade-out animation
+    setTimeout(() => {
+      setCurrentProject(index); // Change project after fade-out
+      setFade(true); // Trigger fade-in animation
+    }, 300); // Delay to allow fade-out effect
+  };
+
   return (
     <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portofolio">
       <div className="text-center mb-12">
@@ -69,11 +86,11 @@ const Portofolio = () => {
             <Carousel resetIndex={currentProject}>
               {projects[currentProject].img.map((image, index) => (
                 <div key={index} className="carousel-slide">
-                    <img
-                  src={image}
-                  alt={projects[currentProject].title}
-                  className="w-full h-80 object-cover rounded-lg"
-                />
+                  <img
+                    src={image}
+                    alt={projects[currentProject].title}
+                    className="h-80"
+                  />
                 </div>
               ))}
             </Carousel>
@@ -91,12 +108,16 @@ const Portofolio = () => {
 
           <div className="flex space-x-4">
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href={projects[currentProject].links.site}
               className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
             >
               View Site
             </a>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href={projects[currentProject].links.github}
               className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300"
             >
@@ -111,12 +132,12 @@ const Portofolio = () => {
           </div>
         </div>
 
-        <ul className="z-10 ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-center mt-4 md:gap-1">
+        <ul className="z-10 ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-start mt-4 md:gap-1">
           {projects.map((project, index) => (
             <li
               key={index}
-              onClick={() => setCurrentProject(index)}
-              className={`cursor-pointer text-gray-300 bg-slate-700 rounded-lg p-2 max-w-[100px] hover:bg-slate-800 transition duration-300 ${
+              onClick={() => handleProjectChange(index)}
+              className={`cursor-pointer text-gray-300 bg-slate-700 rounded-lg p-2 max-w-[200px] hover:bg-slate-800 transition duration-300 ${
                 currentProject === index ? "bg-slate-900" : ""
               }`}
             >

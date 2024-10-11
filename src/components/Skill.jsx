@@ -14,11 +14,11 @@ import {
   TailwindcssOriginal,
 } from "devicons-react";
 
-const About = () => {
+const Skill = () => {
   return (
     <div
       className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center mt-12 sm:mt-16 lg:mt-24"
-      id="about"
+      id="Skills"
     > 
       <div className="relative group">
         <div className="w-full h-full absolute -inset-1 bg-gradient-to-r from-teal-100 to-teal-900 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
@@ -35,9 +35,8 @@ const About = () => {
       </div>
       <div className="p-6">
         <h2 className="text-gray-200 text-3xl font-bold mb-4">Skills</h2>
-        <p className="text-gray-300 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-          quas.
+        <p className="text-gray-300 mb-4 text-lg">
+        As a Computer Science student, I am passionate about exploring new technologies and programming languages. By strengthening my foundational skills taught at university, I can easily grasp new languages and adapt quickly. My enthusiasm for continuous learning motivates me to seek opportunities that enhance my knowledge in the dynamic field of technology.
         </p>
         <div className="flex flex-wrap gap-4 text-4xl ">
           <Html5Plain colored size="30" />
@@ -57,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skill;

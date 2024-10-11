@@ -29,8 +29,8 @@ const Navbar = () => {
         </li>
 
         <li className="relative group">
-          <Link to="about" smooth={true} offset={-96} duration={500}>
-            About
+          <Link to="Skills" smooth={true} offset={-96} duration={500}>
+            Skills
           </Link>
           <span className="absolute bottom-0 left-0 w-full h-1 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
         </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
               offset={-96}
               duration={500}
             >
-              About
+              Skills
             </Link>
           </li>
           <li>

@@ -18,7 +18,7 @@ body{
 }
 
 h2{
-    @apply text-xl md:text-3xl;
+    @apply text-base md:text-xl;
 }
 
 p{
@@ -55,10 +55,10 @@ p{
 }
 
 .carousel-container {
-    width: 100%;  /* You can adjust this to a fixed value, e.g., max-w-[600px] */
-    max-width: 600px; /* You can tweak the width to fit your design */
-    height: 400px;  /* Fixed height for the carousel */
-    overflow: hidden;  /* Ensures that only one image is shown at a time */
+    width: 100%;  
+    max-width: 600px; 
+    height: 400px; 
+    overflow: hidden; 
     position: relative;
   }
   
@@ -68,14 +68,30 @@ p{
     height: 100%;
   }
   
+  /* .carousel-slide {
+    min-width: 100%;
+    height: 100%;
+  } */
+
   .carousel-slide {
     min-width: 100%;
     height: 100%;
-  }
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #1e1e1e; /* Set a background color */
+}
+
+.carousel-slide img {
+    width: auto; /* Allow width to be auto to maintain aspect ratio */
+    height: 100%; /* Set height to 100% */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    object-fit: contain; /* Keep aspect ratio */
+}
   
   .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Ensures the image scales correctly */
+    object-fit: contain;  
   }
   
