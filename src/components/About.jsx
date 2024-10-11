@@ -19,7 +19,7 @@ const About = () => {
     <div
       className="max-w-[1300px] mx-auto p-6 grid md:grid-cols-2 gap-8 place-items-center mt-12 sm:mt-16 lg:mt-24"
       id="about"
-    >
+    > 
       <div className="relative group">
         <div className="w-full h-full absolute -inset-1 bg-gradient-to-r from-teal-100 to-teal-900 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-300"></div>
         <div

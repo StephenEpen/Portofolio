@@ -39,6 +39,9 @@ const Score = () => {
   return (
     <section className="max-w-[1200px] mx-auto p-4">
       <h2 className="text-3xl font-bold text-gray-200 mb-4">Academic Scores</h2>
+
+      <h3 className="text-xl text-gray-400 mb-2">Current GPA: 3.78/4</h3>
+      <h3 className="text-xl text-gray-400 mb-4">Current Semester: 5th</h3>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {data.map((item, index) => (

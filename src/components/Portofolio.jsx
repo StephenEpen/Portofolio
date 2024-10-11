@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import project1 from "../assets/project1.png";
+import image2 from "../assets/image2.jpeg";
+import image3 from "../assets/image3.png";
+import image4 from "../assets/image4.jpeg";
 import { AiFillGithub } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
-import { Css3Plain, Html5Plain, JavaOriginal, MysqlOriginalWordmark, ReactOriginal, JavascriptOriginal } from "devicons-react";
+import {
+  Css3Plain,
+  Html5Plain,
+  JavaOriginal,
+  MysqlOriginalWordmark,
+  ReactOriginal,
+  JavascriptOriginal,
+} from "devicons-react";
+import Carousel from "./Carousel";
+import { ChevronLeft, ChevronRight } from "react-feather";
 
 const projects = [
   {
-    img: project1,
+    img: [project1, image2, image3, image4],
     title: "Project #1",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
@@ -14,10 +26,10 @@ const projects = [
       site: "#",
       github: "#",
     },
-    language: [Html5Plain, Css3Plain] 
+    language: [Html5Plain, Css3Plain],
   },
   {
-    img: project1,
+    img: [project1],
     title: "Project #2",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
@@ -25,10 +37,10 @@ const projects = [
       site: "#",
       github: "#",
     },
-    language: [JavaOriginal, MysqlOriginalWordmark]
+    language: [JavaOriginal, MysqlOriginalWordmark],
   },
   {
-    img: project1,
+    img: [project1],
     title: "Project #3",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
@@ -36,12 +48,14 @@ const projects = [
       site: "#",
       github: "#",
     },
-    language: [ReactOriginal, JavascriptOriginal]
+    language: [ReactOriginal, JavascriptOriginal],
   },
 ];
 
 const Portofolio = () => {
   const [currentProject, setCurrentProject] = useState(0);
+
+  const [slide, setSlide] = useState(0)
   return (
     <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portofolio">
       <div className="text-center mb-12">
@@ -51,12 +65,18 @@ const Portofolio = () => {
 
       <div className="relative flex flex-col md:flex-row">
         <div className="z-10 glass p-6 w-full border-2 max-w-[600px]">
-          <div className="w-full h-80">
-            <img
-              src={projects[currentProject].img}
-              alt={projects[currentProject].title}
-              className="w-full h-full object-cover rounded-lg mb-4"
-            />
+          <div>
+            <Carousel resetIndex={currentProject}>
+              {projects[currentProject].img.map((image, index) => (
+                <div key={index} className="carousel-slide">
+                    <img
+                  src={image}
+                  alt={projects[currentProject].title}
+                  className="w-full h-80 object-cover rounded-lg"
+                />
+                </div>
+              ))}
+            </Carousel>
           </div>
 
           <p className="text-gray-200 my-4">
@@ -65,7 +85,7 @@ const Portofolio = () => {
 
           <div className="flex flex-wrap gap-4 text-4xl mb-4">
             {projects[currentProject].language.map((Icon, index) => (
-              <Icon key={index} size={30} /> 
+              <Icon key={index} size={30} />
             ))}
           </div>
 

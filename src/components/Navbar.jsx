@@ -11,12 +11,14 @@ const Navbar = () => {
   };
 
   const closeNav = () => {
+    event.preventDefault();
     setNav(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-[#232323] h-24 flex text-2xl justify-between text-gray-200 items-center px-6 max-w-[1300px] mx-auto">
-      <a href="/"><img src={navbarLogo} alt="Home" className="w-15 h-8 md:w-25 md:h-10"/></a>
+      <a href="#" onClick={closeNav}><img src={navbarLogo} alt="Home" className="w-15 h-8 md:w-25 md:h-10"/></a>
 
       <ul className="hidden md:flex gap-12 cursor-pointer">
         <li className="relative group">
