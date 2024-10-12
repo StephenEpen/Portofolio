@@ -4,6 +4,8 @@ import profilepic from "../assets/profilepic.png";
 import ShinyEffect from "./ShinyEffect";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
+const cv = "/files/cv.pdf"
+
 const Hero = () => {
   return (
     <div className="grid md:grid-cols-2 place-items-center max-w-[1250px] mx-auto mb-8 md:md-32 pt-28">
@@ -19,13 +21,21 @@ const Hero = () => {
           />
         </p>
         <h2 className="text-gray-300">
-        I am a Computer Science student at Bina Nusantara University, currently enrolled in Software Engineering. I enjoy learning new programming languages while building websites, and I actively seek opportunities to enhance my skills with a quick understanding.
+          I am a Computer Science student at Bina Nusantara University,
+          currently enrolled in Software Engineering. I enjoy learning new
+          programming languages while building websites, and I actively seek
+          opportunities to enhance my skills with a quick understanding.
         </h2>
 
         <div className="flex flex-row gap-4 md:gap-6 mb-4 md:mb-0">
-          <button className="transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2 bg-gradient-to-r from-[#50a7c7] via-[#1f7c8f] to-[#3d6ca4] rounded-xl">
+          <a
+            href={cv}
+            download="cv.pdf"
+            className="flex items-center justify-center transform transition-transform hover:scale-105 hover:shadow-lg z-10 cursor-pointer font-bold text-gray-200 w-1/2 mt-6 p-2 bg-gradient-to-r from-[#50a7c7] via-[#1f7c8f] to-[#3d6ca4] rounded-xl"
+          >
             Download CV
-          </button>
+          </a>
+
           <a
             href="https://github.com/StephenEpen"
             target="_blank"
@@ -55,7 +65,7 @@ const Hero = () => {
 
       <div className="relative flex justify-center items-center">
         <div className="absolute z-0 w-[300px] md:w-[500px]">
-        <svg
+          <svg
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
             width="100%"

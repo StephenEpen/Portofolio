@@ -10,26 +10,26 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Space Grotesk", sans-serif;
     background: linear-gradient(135deg, #282727, #201e1e);
     background-size: cover;
     background-repeat: none;
 }
 
-h2{
+h2 {
     @apply text-base md:text-xl;
 }
 
-p{
+p {
     @apply text-xl tracking-tight leading-relaxed
 }
 
-.glass{
+.glass {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
@@ -41,7 +41,7 @@ p{
     background: radial-gradient(circle, rgba(70, 161, 181, 0.2), transparent 70%);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -49,49 +49,43 @@ p{
     background: linear-gradient(135deg, #282727, #201e1e);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #50a7c7;
     border-radius: 6px;
 }
 
 .carousel-container {
-    width: 100%;  
-    max-width: 600px; 
-    height: 400px; 
-    overflow: hidden; 
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    overflow: hidden;
     position: relative;
-  }
-  
-  .carousel-track {
+}
+
+.carousel-track {
     display: flex;
     width: 100%;
     height: 100%;
-  }
-  
-  /* .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-  } */
+}
 
-  .carousel-slide {
+.carousel-slide {
     min-width: 100%;
     height: 100%;
-    display: flex; /* Use flex to center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: #1e1e1e; /* Set a background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
 }
 
 .carousel-slide img {
-    width: auto; /* Allow width to be auto to maintain aspect ratio */
-    height: 100%; /* Set height to 100% */
-    max-width: 100%; /* Ensure it doesn't overflow */
-    object-fit: contain; /* Keep aspect ratio */
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
-  
-  .carousel-slide img {
+
+.carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  
-  }
-  
+    object-fit: contain;
+}

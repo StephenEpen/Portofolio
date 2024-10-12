@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import project1 from "../assets/project1.png";
-import image2 from "../assets/image2.jpeg";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.jpeg";
 import project21 from "../assets/project2-1.png";
 import project22 from "../assets/project2-2.png";
 import project23 from "../assets/project2-3.png";
@@ -17,61 +13,39 @@ import ShinyEffect from "./ShinyEffect";
 import {
   Css3Plain,
   Html5Plain,
-  JavaOriginal,
-  MysqlOriginalWordmark,
   ReactOriginal,
   JavascriptOriginal,
+  TailwindcssOriginal,
 } from "devicons-react";
 import Carousel from "./Carousel";
 
 const projects = [
-  // {
-  //   img: [project1, image2, image3, image4],
-  //   title: "Project #1",
-  //   description:
-  //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
-  //   links: {
-  //     site: "#",
-  //     github: "#",
-  //   },
-  //   language: [Html5Plain, Css3Plain],
-  // },
   {
     img: [project21, project22, project23, project24],
     title: "Bad Code Smell",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
+      "The Bad Code Smell website was created as a project assignment for the Code Reengineering course. The purpose of this website is to provide education about code smells.",
     links: {
       site: "https://bad-code-smell-ss.vercel.app/",
       github: "https://github.com/StephenEpen/Bad-Code-Smell",
     },
-    language: [JavaOriginal, MysqlOriginalWordmark],
+    language: [ReactOriginal, TailwindcssOriginal],
   },
   {
     img: [project31, project32, project33, project34, project35],
     title: "JETFLIX",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore possimus fugit tempora iure ex ullam.",
+      "Jetflix is the final project for the Human and Computer Interaction course. The purpose of this project is to create a website featuring movies based on the fundamentals of web development.",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://jetflix-epen.vercel.app/",
+      github: "https://github.com/StephenEpen/JETFLIX",
     },
-    language: [ReactOriginal, JavascriptOriginal],
+    language: [Html5Plain, Css3Plain, JavascriptOriginal],
   },
 ];
 
 const Portofolio = () => {
   const [currentProject, setCurrentProject] = useState(0);
-
-  const [fade, setFade] = useState(true);
-
-  const handleProjectChange = (index) => {
-    setFade(false); // Start fade-out animation
-    setTimeout(() => {
-      setCurrentProject(index); // Change project after fade-out
-      setFade(true); // Trigger fade-in animation
-    }, 300); // Delay to allow fade-out effect
-  };
 
   return (
     <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portofolio">
@@ -89,7 +63,7 @@ const Portofolio = () => {
                   <img
                     src={image}
                     alt={projects[currentProject].title}
-                    className="h-80"
+                    className="h-30"
                   />
                 </div>
               ))}
@@ -136,7 +110,7 @@ const Portofolio = () => {
           {projects.map((project, index) => (
             <li
               key={index}
-              onClick={() => handleProjectChange(index)}
+              onClick={() => setCurrentProject(index)}
               className={`cursor-pointer text-gray-300 bg-slate-700 rounded-lg p-2 max-w-[200px] hover:bg-slate-800 transition duration-300 ${
                 currentProject === index ? "bg-slate-900" : ""
               }`}

@@ -27,7 +27,7 @@ const Carousel = ({ children: slides, resetIndex }) => {
           onClick={prev}
           className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
         >
-          <ChevronLeft size={30} />
+          <ChevronLeft size={25} />
         </button>
         <button
           onClick={next}
