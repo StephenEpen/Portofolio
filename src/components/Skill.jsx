@@ -1,5 +1,5 @@
 import React from "react";
-import project1 from "../assets/project1.png";
+import skillImage from "../assets/skill-image.png";
 import {
   CPlain,
   CsharpPlain,
@@ -27,7 +27,7 @@ const Skill = () => {
                  rounded-lg"
         >
           <img
-            src={project1}
+            src={skillImage}
             alt="project 1"
             className="rounded-lg md:max-w-[500px]"
           />
